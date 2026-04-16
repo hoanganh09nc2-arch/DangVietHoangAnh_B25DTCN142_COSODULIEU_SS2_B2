@@ -1,6 +1,13 @@
-create table customers (
-	customersId int primary key,
-    fullName varchar(100) not null,
-    email varchar(100) not null unique,
-    age int check (age > 0) not null
-)
+CREATE DATABASE customManager;
+USE customManager;
+CREATE TABLE CUSTOMERS (
+    CustomerID INT PRIMARY KEY,
+    FullName VARCHAR(100),
+    Email VARCHAR(100), 
+    Age INT             
+);
+ALTER TABLE CUSTOMERS 
+CHANGE Email Email VARCHAR(100) NOT NULL;
+
+ALTER TABLE CUSTOMERS 
+CHANGE Age Age INT CHECK(Age > 0);
